@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./Random.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-random"></i> Random Number Generator</h1>
+            <p class="subtitle">Generate random numbers with custom ranges</p>
+        </header>
+        
+        <div class="main-content">
+            <section class="generator-section">
+                <h2 class="section-title"><i class="fas fa-bolt"></i> Generated Number</h2>
+                <div class="result-display">
+                    <div class="result-number" id="result">0</div>
+                </div>
+                <button class="generate-btn" id="generateBtn">
+                    <i class="fas fa-dice"></i> Generate Random Number
+                </button>
+            </section>
+            
+            <section class="controls-section">
+                <h2 class="section-title"><i class="fas fa-sliders-h"></i> Controls</h2>
+                <div class="range-controls">
+                    <div class="range-input">
+                        <label for="minRange">Minimum Value</label>
+                        <input type="number" id="minRange" value="1" min="-9999" max="9999">
+                    </div>
+                    <div class="range-input">
+                        <label for="maxRange">Maximum Value</label>
+                        <input type="number" id="maxRange" value="100" min="-9999" max="99999">
+                    </div>
+                </div>
+                <div class="additional-controls">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="allowDecimals">
+                        <label for="allowDecimals">Allow decimal numbers</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="allowNegative" checked>
+                        <label for="allowNegative">Allow negative numbers</label>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="history-section">
+                <h2 class="section-title"><i class="fas fa-history"></i> Generation History</h2>
+                <ul class="history-list" id="historyList">
+                    <!-- History items will be added here by JavaScript -->
+                </ul>
+                <button class="clear-history" id="clearHistory">Clear History</button>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Random Number Generator &copy; 2023 | Click the button to generate a new random number</p>
+        </footer>
+    </div>
+</body>
+<script src="./Random.js"></script>
+</html>
